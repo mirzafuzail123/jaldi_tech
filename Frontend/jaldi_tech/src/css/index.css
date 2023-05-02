@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=fallback');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+
+
+/* Additional styles */
+@import 'additional-styles/utility-patterns.css';
+@import 'additional-styles/range-slider.css';
+@import 'additional-styles/toggle-switch.css';
+@import 'additional-styles/flatpickr.css';
+@import 'additional-styles/theme.css';
+
+@import 'tailwindcss/utilities';
+
+@layer components {
+    .zigzag {
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .zigzag:after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        background: url(http://high-8.com/assets/svg/zigzag.svg);
+        background-size: cover;
+    }
+
+}
+
+input:checked~.dot {
+    transform: translateX(100%);
+    background-color: slateblue;
+}
+
+@layer utilities {
+    .scrollbar-medium::-webkit-scrollbar {
+        height: 7px;
+        width: 7px;
+        border-radius: 100%
+    }
+
+    .rounded-scrollbar::-webkit-scrollbar-thumb {
+        border-radius: 9999px;
+    }
+}
+
+
+.bubble {
+    /* position: relative; */
+    background: #a8aeb5;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 0;
+    z-index: 1;
+    border-style: solid;
+    border-color: transparent #a8aeb5;
+    border-width: 14px 0 14px 20px;
+    top: 50%;
+    right: -20px;
+    margin-top: -14px;
+}
+
+.my-swal-container {
+    margin: 0rem 4rem 0rem 0rem !important;
+}

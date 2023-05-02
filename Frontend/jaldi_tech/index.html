@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inbound CRM</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        appId: '568448074932669',
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: 'v15.0'
+      });
+    }
+  </script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+  <script src="https://js.pusher.com/7.2/pusher.min.js"></script>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
